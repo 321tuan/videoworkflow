@@ -1,0 +1,219 @@
+{
+  "words": [
+    {
+      "text": "Dạng",
+      "start": 0.1,
+      "end": 0.34
+    },
+    {
+      "text": "4:",
+      "start": 0.34,
+      "end": 0.57
+    },
+    {
+      "text": "Câu",
+      "start": 0.57,
+      "end": 0.81
+    },
+    {
+      "text": "lệnh",
+      "start": 0.81,
+      "end": 1.05
+    },
+    {
+      "text": "SQL.",
+      "start": 1.05,
+      "end": 1.28
+    },
+    {
+      "text": "Nhớ",
+      "start": 1.28,
+      "end": 1.52
+    },
+    {
+      "text": "thần",
+      "start": 1.52,
+      "end": 1.76
+    },
+    {
+      "text": "chú:",
+      "start": 1.76,
+      "end": 1.99
+    },
+    {
+      "text": "SELECT",
+      "start": 1.99,
+      "end": 2.23
+    },
+    {
+      "text": "là",
+      "start": 2.23,
+      "end": 2.47
+    },
+    {
+      "text": "chọn",
+      "start": 2.47,
+      "end": 2.7
+    },
+    {
+      "text": "cột,",
+      "start": 2.7,
+      "end": 2.94
+    },
+    {
+      "text": "FROM",
+      "start": 2.94,
+      "end": 3.17
+    },
+    {
+      "text": "là",
+      "start": 3.17,
+      "end": 3.41
+    },
+    {
+      "text": "chọn",
+      "start": 3.41,
+      "end": 3.65
+    },
+    {
+      "text": "bảng,",
+      "start": 3.65,
+      "end": 3.88
+    },
+    {
+      "text": "WHERE",
+      "start": 3.88,
+      "end": 4.12
+    },
+    {
+      "text": "là",
+      "start": 4.12,
+      "end": 4.36
+    },
+    {
+      "text": "lọc",
+      "start": 4.36,
+      "end": 4.59
+    },
+    {
+      "text": "điều",
+      "start": 4.59,
+      "end": 4.83
+    },
+    {
+      "text": "kiện.",
+      "start": 4.83,
+      "end": 5.07
+    },
+    {
+      "text": "Đề",
+      "start": 5.07,
+      "end": 5.3
+    },
+    {
+      "text": "bảo",
+      "start": 5.3,
+      "end": 5.54
+    },
+    {
+      "text": "lọc",
+      "start": 5.54,
+      "end": 5.78
+    },
+    {
+      "text": "học",
+      "start": 5.78,
+      "end": 6.01
+    },
+    {
+      "text": "sinh",
+      "start": 6.01,
+      "end": 6.25
+    },
+    {
+      "text": "có",
+      "start": 6.25,
+      "end": 6.49
+    },
+    {
+      "text": "điểm",
+      "start": 6.49,
+      "end": 6.72
+    },
+    {
+      "text": "từ",
+      "start": 6.72,
+      "end": 6.96
+    },
+    {
+      "text": "8",
+      "start": 6.96,
+      "end": 7.2
+    },
+    {
+      "text": "trở",
+      "start": 7.2,
+      "end": 7.43
+    },
+    {
+      "text": "lên,",
+      "start": 7.43,
+      "end": 7.67
+    },
+    {
+      "text": "cứ",
+      "start": 7.67,
+      "end": 7.9
+    },
+    {
+      "text": "tìm",
+      "start": 7.9,
+      "end": 8.14
+    },
+    {
+      "text": "mệnh",
+      "start": 8.14,
+      "end": 8.38
+    },
+    {
+      "text": "đề",
+      "start": 8.38,
+      "end": 8.61
+    },
+    {
+      "text": "WHERE",
+      "start": 8.61,
+      "end": 8.85
+    },
+    {
+      "text": "Điểm",
+      "start": 8.85,
+      "end": 9.09
+    },
+    {
+      "text": "lớn",
+      "start": 9.09,
+      "end": 9.32
+    },
+    {
+      "text": "hơn",
+      "start": 9.32,
+      "end": 9.56
+    },
+    {
+      "text": "hoặc",
+      "start": 9.56,
+      "end": 9.8
+    },
+    {
+      "text": "bằng",
+      "start": 9.8,
+      "end": 10.03
+    },
+    {
+      "text": "8.",
+      "start": 10.03,
+      "end": 10.27
+    }
+  ]
+}

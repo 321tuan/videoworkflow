@@ -1,0 +1,14 @@
+{
+  "s01_hook": 10.32,
+  "s02_empathy": 8.16,
+  "s03_dang1_khoa": 9.52,
+  "s04_dang2_khoa_gop": 10.24,
+  "s05_dang3_toan_ven": 10.48,
+  "s06_dang4_sql": 10.48,
+  "s07_meo_thi": 9.68,
+  "s08_cta": 12.72,
+  "fk_01_hook": 5.2,
+  "fk_02_empathy": 5.44,
+  "fk_03_value": 10.32,
+  "fk_04_cta": 5.2
+}

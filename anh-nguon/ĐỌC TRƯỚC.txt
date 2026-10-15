@@ -1,0 +1,44 @@
+KHO ẢNH NGUỒN — đã đọc kỹ từng ảnh (03/10/2026)
+==================================================
+
+img-1.jpg — Biểu đồ cột PHỔ ĐIỂM Tin học THPT 2026 (900x562, nền sáng).
+  Số liệu in trên ảnh: 18.264 TS; ĐTB 6,07; <5: 4.575 bài; >=7: 5.558; điểm 10: 25 bài.
+  DÙNG KHI: nói về mặt bằng điểm/phân hóa đề. KHÔNG dùng khi cần số liệu "cao" (ĐTB chỉ 6,07).
+  Lưu ý nền sáng → đặt trên plate sáng riêng.
+
+img-2.webp — ĐỀ THI CHÍNH THỨC Tin học TN THPT 2026, mã đề 0525 (1381x2078, ảnh dọc, đã có người làm/khoanh).
+  Header: Bộ GD-ĐT, 50 phút không kể phát đề, Phần I câu 1-24 (HTML/CSS, AI, đơn vị bộ nhớ, Switch, Python/C++...).
+  DÙNG KHI: lời nhắc tới "đề thi" (cảnh tư duy/học vẹt, cảnh làm đề). Khung dọc 380x560, objectPosition top.
+  Caption gợi ý: "Đề thi chính thức 2026 — 50 phút".
+
+img-3.png — LOGO Neo "THPTQG - MÔN TIN HỌC" (1685x933, nền trắng, chữ xanh dương/đen).
+  DÙNG KHI: hook/giới thiệu thương hiệu. Nền trắng → cắt viền + plate sáng riêng, không đặt trực tiếp lên nền tối.
+
+img-4.png — SCREENSHOT website Neo (1710x1078, nền tối, hợp video tối).
+  Nav: Trang chủ · Học tập · Luyện tập · Nhạc học tập · Đề thi · Bảng xếp hạng · Đăng nhập.
+  Hero: "Học Tin Học Thật Dễ Dàng với NEO" + nút Bắt đầu học / Luyện đề ngay.
+  Dưới: vinh danh 148 thủ khoa/top điểm cao THPT 2026.
+  DÙNG KHI: lời nhắc tới website/CTA. Đặt trực tiếp được (nền tối), khung trình duyệt càng đẹp.
+  LƯU Ý: ảnh có nút "Đăng nhập" — đừng ghi chú thích "không cần đăng nhập" cạnh nó.
+anh-tac-gia-pythoon - hình hhh của tác giả python
+Cách làm việc:
+- AI đã xem + đo từng ảnh, không cần user tả lại 4 ảnh này.
+- Muốn thay/bổ sung: THẢ ảnh mới vào thư mục + báo tên file → AI xem, đo, hỏi caption → cập nhật file này.
+
+LOGOS TRƯỜNG ĐẠI HỌC (tải 05/10/2026, nguồn Wikipedia/Wikimedia — user cho phép dùng):
+  logo-bkhn.png  — Logo ĐHBK Hà Nội tiếng Việt (compa + bánh răng + sao vàng, 211KB).
+  Plate trắng. NGUỒN: link do user cung cấp (thumb.wikimedia vi).
+  logo-uet.svg  — Huy hiệu tròn xanh UET (vector, trong suốt). Plate trắng.
+  logo-uit.png  — Logo UIT xanh dương (960px). Plate trắng.
+  logo-ptit.png — Logo PTIT đỏ (chữ PTIT + sao vàng + sách mở, nền trắng, 178KB).
+  logo-hcmut.svg — Logo BK TP.HCM (vector). Plate trắng.
+  DÙNG KHI: cảnh tổ hợp xét tuyển (hàng 6 logo: BKHN · UET · UIT · PTIT · HCMUT · FPT).
+  logo-fpt.jpg  — Logo FPT 3 màu + chữ "Fpt University" (372px, nền trắng). Plate trắng.
+  DÙNG KHI: cảnh tổ hợp xét tuyển (mỗi logo đúng trường đã xác minh dùng tổ hợp Tin).
+  Ghi chú bản quyền: logo các trường là nhãn hiệu — dùng theo cho phép của user cho video này.
+
+ẢNH TÁC GIẢ (tải 08/10/2026, nguồn Wikimedia Commons — CC BY-SA 4.0 Daniel Stroud):
+  guido-van-rossum.jpg — Chân dung Guido van Rossum, cha đẻ Python (960px, 166KB).
+  NGUỒN: https://commons.wikimedia.org/wiki/File:Guido-portrait-2014.jpg
+  DÙNG KHI: cảnh giới thiệu tác giả Python. Khung tròn + viền cyan, caption "Cha đẻ Python".
+  Ghi nguồn CC BY-SA 4.0 khi giao video.

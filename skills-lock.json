@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "ultimate-ai-media-generator-skill": {
+      "source": "ZeroLu/Ultimate-AI-Media-Generator-Skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "214c70dc63c6c9da724ec7898b82172e00f847d262b24a55bf91b9c567859e4d"
+    }
+  }
+}

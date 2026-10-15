@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chọn giọng đọc — SẠC LƯỚI</title>
+<style>
+  :root{--bg:#0b1020;--card:#141b32;--line:#243055;--fg:#e8ecf8;--dim:#93a0c4;--acc:#5ad1a0}
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(160deg,#0b1020,#0d1a2e 60%,#0b1020);color:var(--fg);
+       font:15px/1.55 "Segoe UI",system-ui,sans-serif;padding:24px}
+  .wrap{max-width:860px;margin:0 auto}
+  h1{font-size:21px;margin:0 0 4px} .sub{color:var(--dim);font-size:13px;margin-bottom:20px}
+  .c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+  .hd{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+  .nm{font-weight:600;font-size:16px} .tag{color:var(--dim);font-size:12.5px}
+  .rec{background:#0f3327;border:1px solid var(--acc);color:var(--acc);border-radius:99px;
+       padding:1px 9px;font-size:11.5px}
+  .txt{color:var(--dim);font-size:13.5px;margin:6px 0 10px;padding-left:11px;border-left:2px solid var(--line)}
+  audio{width:100%;height:34px}
+  a{color:var(--acc)} .foot{margin-top:18px;color:var(--dim);font-size:13.5px;line-height:1.9}
+  code{background:#0a0f1e;padding:1px 6px;border-radius:5px;border:1px solid var(--line)}
+</style></head><body><div class="wrap">
+<h1>Bước 1 — chọn giọng đọc</h1>
+<div class="sub">Cùng một câu mở đầu, 4 giọng khác nhau. Nghe xong báo tôi tên giọng (hoặc mở <a href="/">trang duyệt</a> và chọn trong ô “Giọng”).</div>
+
+<div class="c">
+  <div class="hd"><span class="nm">Nguyễn Ngân</span><span class="rec">gợi ý</span>
+    <span class="tag">nữ · F0 219 Hz · ấm, trầm hơn hai giọng nữ còn lại</span></div>
+  <div class="txt">“Sáu tháng đầu năm nay, người Việt đã mua hơn một trăm mười lăm nghìn chiếc xe điện… và câu chuyện hôm nay bắt đầu đúng từ khoảng trống đó.”</div>
+  <audio controls preload="none" src="/samples/4ecca2df-s01_hook.wav"></audio>
+</div>
+
+<div class="c">
+  <div class="hd"><span class="nm">MC Khánh Ly</span>
+    <span class="tag">nữ · F0 249 Hz · lên giọng rõ, hợp phần trình bày số liệu</span></div>
+  <div class="txt">“Sáu tháng đầu năm nay, người Việt đã mua hơn một trăm mười lăm nghìn chiếc xe điện… và câu chuyện hôm nay bắt đầu đúng từ khoảng trống đó.”</div>
+  <audio controls preload="none" src="/samples/e02ee3b3-s01_hook.wav"></audio>
+</div>
+
+<div class="c">
+  <div class="hd"><span class="nm">Huyen</span>
+    <span class="tag">nữ · F0 251 Hz · trẻ, nhẹ, gần giọng quảng cáo</span></div>
+  <div class="txt">“Sáu tháng đầu năm nay, người Việt đã mua hơn một trăm mười lăm nghìn chiếc xe điện… và câu chuyện hôm nay bắt đầu đúng từ khoảng trống đó.”</div>
+  <audio controls preload="none" src="/samples/fda8e462-s01_hook.wav"></audio>
+</div>
+
+<div class="c">
+  <div class="hd"><span class="nm">MC Anh Đức</span>
+    <span class="tag">nam · F0 136 Hz · giọng dẫn chương trình, uy</span></div>
+  <div class="txt">“Sáu tháng đầu năm nay, người Việt đã mua hơn một trăm mười lăm nghìn chiếc xe điện… và câu chuyện hôm nay bắt đầu đúng từ khoảng trống đó.”</div>
+  <audio controls preload="none" src="/samples/68da856b-s01_hook.wav"></audio>
+</div>
+
+<div class="foot">
+  <b>Sau khi chốt giọng</b> tôi sinh lời đọc <b>từng đoạn một</b> (15 đoạn), mỗi đoạn một file riêng.<br>
+  Trang <a href="/">duyệt giọng</a> cho phép: sửa câu chữ → bấm “Sinh lại dòng này” → nghe → bấm “Duyệt OK”.<br>
+  Chỉ khi cả 15 đoạn được duyệt, tôi mới dựng video. <b>Video chưa được render khi bạn chưa duyệt xong.</b>
+</div>
+</div></body></html>

@@ -1,0 +1,17 @@
+{
+  "name": "tin-12-csdl",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video Tin hoc 12: Co so du lieu & SQL - Neo Education (9:16)",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render TinHocCSDL out/video.mp4",
+    "still": "remotion still TinHocCSDL out/preview.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.528",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.528"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "voice": {
+    "s01_hook": 1,
+    "s02_empathy": 1,
+    "s03_dang1_khoa": 1,
+    "s04_dang2_khoa_gop": 1,
+    "s05_dang3_toan_ven": 1,
+    "s06_dang4_sql": 1,
+    "s07_meo_thi": 1,
+    "s08_cta": 1
+  },
+  "bgm": 0.44
+}

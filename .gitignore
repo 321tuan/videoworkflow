@@ -1,0 +1,43 @@
+# ==========================================
+# GITIGNORE - EDU VIDEO WORKFLOW SYSTEM
+# ==========================================
+
+# 1. Thư viện phụ thuộc (rất nặng, tải lại bằng npm install)
+node_modules/
+**/node_modules/
+
+# 2. Thư mục xuất video, preview và log render
+**/out/
+**/renders/
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.png.tmp
+*.log
+render.log
+
+# 3. Thư mục lưu trữ dự án cũ & bản render hoàn chỉnh (dung lượng GB)
+video-cu/
+videos/
+thư mục chứa các dự án để xem lại lần sau/
+thu muc chua cac du an de xem lai lan sau/
+*.zip
+*.tar.gz
+*.7z
+
+# 4. URL tunnel Colab tạm thời & cấu hình bảo mật cá nhân
+**/tts-url.txt
+.env
+.env.local
+.env.*.local
+
+# 5. File hệ thống & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

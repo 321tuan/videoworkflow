@@ -1,0 +1,13 @@
+{
+  "voice_id": "clone_Nhật_Phong__11Labs__M",
+  "segments": {
+    "s01_hook": "Tưởng dễ ăn điểm mười Tin học mười hai... nhưng hơn tám mươi phần trăm hai ca chín lại mất điểm oan ở phần Cơ sở dữ liệu vì dính bẫy này. Dành đúng một phút... quét sạch bốn dạng bài chắc chắn có mặt trong đề thi nhé.",
+    "s02_empathy": "Nhiều em mất điểm vì học vẹt những từ ngữ hàn lâm... nhưng bản chất cực kỳ trực quan như sau. Bảng là một danh sách dữ liệu... Cột là thuộc tính... và Hàng là từng bản ghi cụ thể.",
+    "s03_dang1_khoa": "Dạng một: Bắt Khóa Chính và Khóa Ngoài. Khóa Chính là cột duy nhất... không được trùng, không để trống, như Mã học sinh. Khi cột này xuất hiện ở bảng Điểm để làm cầu nối... nó chính là Khóa Ngoài.",
+    "s04_dang2_khoa_gop": "Dạng hai: Bẫy Khóa Chính gồm nhiều cột. Trong bảng Điểm, một em thi nhiều môn nên Mã học sinh bị lặp lại. Lúc này, Khóa Chính bắt buộc phải gộp cả Mã học sinh và Mã môn học... mới tạo thành một giá trị duy nhất.",
+    "s05_dang3_toan_ven": "Dạng ba: Toàn vẹn tham chiếu. Đề hỏi: Có thể xóa một em ở bảng Học sinh khi em đó đang có điểm ở bảng Điểm không? Nhớ ngay: Khóa Ngoài sẽ chặn lại. Muốn xóa... phải xóa điểm trước, rồi mới xóa học sinh.",
+    "s06_dang4_sql": "Dạng bốn: Câu lệnh Ét xê quêu. Nhớ thần chú: Se lếch là chọn cột... Phrom là chọn bảng... Oe là lọc điều kiện. Đề bảo lọc học sinh có điểm từ tám trở lên... cứ tìm mệnh đề Oe Điểm lớn hơn hoặc bằng tám.",
+    "s07_meo_thi": "Như vậy, qua các dạng trên, ta rút ra được những mẹo làm bài nhanh như sau... Nhìn vào bảng con trước... cột nào mang đi tham chiếu thì khoanh ngay Khóa Ngoài. Tuyệt đối không đoán mò theo cảm tính nhé.",
+    "s08_cta": "Tóm lại, khi em đã hiểu sâu bản chất... đề thi có biến hóa hay gài bẫy thế nào, em cũng tự tin ăn trọn điểm. Muốn quét sạch mọi dạng bài và tự tin bước vào phòng thi... vào ngay neoeducation chấm vi en để cùng luyện đề chuẩn cấu trúc mới nhé."
+  }
+}
