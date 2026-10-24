@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dự Án Thử Nghiệm Thiết Kế Vùng An Toàn TikTok iPhone - Neo Education</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #070A12;
+      color: #E2E8F0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header {
+      text-align: center;
+      max-width: 900px;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34D399;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    p.desc {
+      color: #94A3B8;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      max-width: 960px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .stat-card {
+      background: #0F172A;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 16px 20px;
+      text-align: center;
+    }
+    .stat-val {
+      font-size: 26px;
+      font-weight: 900;
+      color: #38BDF8;
+      margin-bottom: 4px;
+      font-family: monospace;
+    }
+    .stat-lbl {
+      font-size: 13px;
+      color: #64748B;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1300px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    .phone-mock {
+      background: #111827;
+      border: 2px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      display: flex;
+      flex-direction: column;
+      width: 380px;
+    }
+    .phone-head {
+      background: #1F2937;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .phone-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="badge">TEST LAB: MOBILE SAFE ZONE CHUẨN IPHONE TIKTOK</div>
+    <h1>DỰ ÁN THỬ NGHIỆM THIẾT KẾ ĐỘC LẬP</h1>
+    <p class="desc">
+      Không nhạc • Không nền rác • Không hiệu ứng thừa.<br>
+      Tập trung 100% vào việc khóa chết nội dung trong <strong>Hộp An Toàn Vàng (Active Safe Box)</strong>, tuyệt đối né sạch 100% các nút và thanh điều hướng TikTok trên iPhone.
+    </p>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-val">X: 45 ➔ 875</div>
+      <div class="stat-lbl">Chiều rộng an toàn (830px)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val">Y: 350 ➔ 1440</div>
+      <div class="stat-lbl">Chiều cao an toàn (1090px)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val">205px</div>
+      <div class="stat-lbl">Khoảng đệm né 6 nút lề phải</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val">480px</div>
+      <div class="stat-lbl">Khoảng đệm né Caption đáy</div>
+    </div>
+  </div>
+
+  <h2 style="font-size: 22px; margin-bottom: 20px; color: #38BDF8;">1. ĐỐI CHIẾU TRỰC TIẾP: THIẾT KẾ THUẦN vs LỒNG GHÉP GIAO DIỆN TIKTOK IPHONE</h2>
+  <div class="gallery">
+    <!-- Clean Design -->
+    <div class="phone-mock">
+      <div class="phone-head">
+        <span>✨ THIẾT KẾ THUẦN (CLEAN)</span>
+        <span style="color: #34D399; font-size: 13px;">Nét căng 100%</span>
+      </div>
+      <img class="phone-img" src="out/preview_hook_clean.png" alt="Clean Hook">
+    </div>
+
+    <!-- Overlay Hook -->
+    <div class="phone-mock">
+      <div class="phone-head">
+        <span>📱 ĐỐI CHIẾU TIKTOK (HOOK)</span>
+        <span style="color: #F59E0B; font-size: 13px;">Né sạch 6 nút</span>
+      </div>
+      <img class="phone-img" src="out/preview_hook_overlay.png" alt="Hook TikTok Overlay">
+    </div>
+
+    <!-- Overlay Value -->
+    <div class="phone-mock">
+      <div class="phone-head">
+        <span>📚 ĐỐI CHIẾU TIKTOK (VALUE CARD)</span>
+        <span style="color: #F59E0B; font-size: 13px;">2 Thẻ Đúng/Sai</span>
+      </div>
+      <img class="phone-img" src="out/preview_value_overlay.png" alt="Value TikTok Overlay">
+    </div>
+
+    <!-- Overlay Outro -->
+    <div class="phone-mock">
+      <div class="phone-head">
+        <span>🏷️ ĐỐI CHIẾU TIKTOK (OUTRO)</span>
+        <span style="color: #F59E0B; font-size: 13px;">Logo Neo Chuẩn</span>
+      </div>
+      <img class="phone-img" src="out/preview_outro_overlay.png" alt="Outro TikTok Overlay">
+    </div>
+  </div>
+
+  <h2 style="font-size: 22px; margin-bottom: 20px; color: #38BDF8;">2. XEM VIDEO RENDER HOÀN CHỈNH (8 GIÂY)</h2>
+  <div class="gallery">
+    <div class="phone-mock">
+      <div class="phone-head">
+        <span>🎬 VIDEO THIẾT KẾ THUẦN</span>
+      </div>
+      <video controls src="out/safe-zone-demo.mp4"></video>
+    </div>
+
+    <div class="phone-mock">
+      <div class="phone-head">
+        <span>📱 VIDEO CHẠY CÙNG GIAO DIỆN TIKTOK</span>
+      </div>
+      <video controls src="out/safe-zone-demo-overlay.mp4"></video>
+    </div>
+  </div>
+
+</body>
+</html>

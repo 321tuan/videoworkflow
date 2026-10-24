@@ -1,0 +1,334 @@
+{
+  "words": [
+    {
+      "text": "Khi",
+      "start": 0.12,
+      "end": 0.24
+    },
+    {
+      "text": "gặp",
+      "start": 0.29,
+      "end": 0.42
+    },
+    {
+      "text": "câu",
+      "start": 0.47,
+      "end": 0.59
+    },
+    {
+      "text": "hỏi",
+      "start": 0.64,
+      "end": 0.76
+    },
+    {
+      "text": "về",
+      "start": 0.81,
+      "end": 0.93
+    },
+    {
+      "text": "đạo",
+      "start": 0.98,
+      "end": 1.11
+    },
+    {
+      "text": "đức",
+      "start": 1.16,
+      "end": 1.28
+    },
+    {
+      "text": "và",
+      "start": 1.33,
+      "end": 1.45
+    },
+    {
+      "text": "an",
+      "start": 1.5,
+      "end": 1.62
+    },
+    {
+      "text": "ninh",
+      "start": 1.67,
+      "end": 1.8
+    },
+    {
+      "text": "mạng,",
+      "start": 1.85,
+      "end": 2.11
+    },
+    {
+      "text": "em",
+      "start": 2.23,
+      "end": 2.35
+    },
+    {
+      "text": "nhớ",
+      "start": 2.4,
+      "end": 2.52
+    },
+    {
+      "text": "ngay",
+      "start": 2.57,
+      "end": 2.69
+    },
+    {
+      "text": "2",
+      "start": 2.74,
+      "end": 2.87
+    },
+    {
+      "text": "bí",
+      "start": 2.92,
+      "end": 3.04
+    },
+    {
+      "text": "kíp",
+      "start": 3.09,
+      "end": 3.21
+    },
+    {
+      "text": "vàng",
+      "start": 3.26,
+      "end": 3.38
+    },
+    {
+      "text": "này",
+      "start": 3.43,
+      "end": 3.56
+    },
+    {
+      "text": "nè:",
+      "start": 3.61,
+      "end": 3.87
+    },
+    {
+      "text": "Yếu",
+      "start": 3.99,
+      "end": 4.11
+    },
+    {
+      "text": "tố",
+      "start": 4.16,
+      "end": 4.28
+    },
+    {
+      "text": "tiên",
+      "start": 4.33,
+      "end": 4.45
+    },
+    {
+      "text": "quyết",
+      "start": 4.5,
+      "end": 4.63
+    },
+    {
+      "text": "để",
+      "start": 4.68,
+      "end": 4.8
+    },
+    {
+      "text": "AI",
+      "start": 4.85,
+      "end": 4.97
+    },
+    {
+      "text": "không",
+      "start": 5.02,
+      "end": 5.14
+    },
+    {
+      "text": "thiên",
+      "start": 5.19,
+      "end": 5.32
+    },
+    {
+      "text": "vị",
+      "start": 5.37,
+      "end": 5.49
+    },
+    {
+      "text": "đích",
+      "start": 5.54,
+      "end": 5.66
+    },
+    {
+      "text": "thị",
+      "start": 5.71,
+      "end": 5.83
+    },
+    {
+      "text": "là",
+      "start": 5.88,
+      "end": 6.01
+    },
+    {
+      "text": "Dữ",
+      "start": 6.06,
+      "end": 6.18
+    },
+    {
+      "text": "liệu",
+      "start": 6.23,
+      "end": 6.35
+    },
+    {
+      "text": "huấn",
+      "start": 6.4,
+      "end": 6.52
+    },
+    {
+      "text": "luyện",
+      "start": 6.57,
+      "end": 6.7
+    },
+    {
+      "text": "phải",
+      "start": 6.75,
+      "end": 6.87
+    },
+    {
+      "text": "thật",
+      "start": 6.92,
+      "end": 7.04
+    },
+    {
+      "text": "chuẩn",
+      "start": 7.09,
+      "end": 7.21
+    },
+    {
+      "text": "mực",
+      "start": 7.26,
+      "end": 7.39
+    },
+    {
+      "text": "và",
+      "start": 7.44,
+      "end": 7.56
+    },
+    {
+      "text": "công",
+      "start": 7.61,
+      "end": 7.73
+    },
+    {
+      "text": "bằng!",
+      "start": 7.78,
+      "end": 8.11
+    },
+    {
+      "text": "Đồng",
+      "start": 8.44,
+      "end": 8.56
+    },
+    {
+      "text": "thời,",
+      "start": 8.61,
+      "end": 8.88
+    },
+    {
+      "text": "nhớ",
+      "start": 8.99,
+      "end": 9.11
+    },
+    {
+      "text": "cảnh",
+      "start": 9.16,
+      "end": 9.28
+    },
+    {
+      "text": "giác",
+      "start": 9.33,
+      "end": 9.46
+    },
+    {
+      "text": "cao",
+      "start": 9.51,
+      "end": 9.63
+    },
+    {
+      "text": "độ",
+      "start": 9.68,
+      "end": 9.8
+    },
+    {
+      "text": "trước",
+      "start": 9.85,
+      "end": 9.97
+    },
+    {
+      "text": "công",
+      "start": 10.02,
+      "end": 10.15
+    },
+    {
+      "text": "nghệ",
+      "start": 10.2,
+      "end": 10.32
+    },
+    {
+      "text": "Deepfake",
+      "start": 10.37,
+      "end": 10.53
+    },
+    {
+      "text": "chuyên",
+      "start": 10.58,
+      "end": 10.7
+    },
+    {
+      "text": "giả",
+      "start": 10.75,
+      "end": 10.87
+    },
+    {
+      "text": "giọng",
+      "start": 10.92,
+      "end": 11.04
+    },
+    {
+      "text": "và",
+      "start": 11.09,
+      "end": 11.22
+    },
+    {
+      "text": "làm",
+      "start": 11.27,
+      "end": 11.39
+    },
+    {
+      "text": "giả",
+      "start": 11.44,
+      "end": 11.56
+    },
+    {
+      "text": "hình",
+      "start": 11.61,
+      "end": 11.73
+    },
+    {
+      "text": "ảnh",
+      "start": 11.78,
+      "end": 11.91
+    },
+    {
+      "text": "để",
+      "start": 11.96,
+      "end": 12.08
+    },
+    {
+      "text": "lừa",
+      "start": 12.13,
+      "end": 12.25
+    },
+    {
+      "text": "đảo",
+      "start": 12.3,
+      "end": 12.42
+    },
+    {
+      "text": "nha!",
+      "start": 12.47,
+      "end": 13.08
+    }
+  ]
+}

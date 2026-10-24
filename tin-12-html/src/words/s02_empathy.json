@@ -1,0 +1,269 @@
+{
+  "words": [
+    {
+      "text": "Rất",
+      "start": 0.12,
+      "end": 0.25
+    },
+    {
+      "text": "nhiều",
+      "start": 0.3,
+      "end": 0.43
+    },
+    {
+      "text": "bạn",
+      "start": 0.48,
+      "end": 0.61
+    },
+    {
+      "text": "bước",
+      "start": 0.66,
+      "end": 0.79
+    },
+    {
+      "text": "vào",
+      "start": 0.84,
+      "end": 0.96
+    },
+    {
+      "text": "phòng",
+      "start": 1.01,
+      "end": 1.14
+    },
+    {
+      "text": "thi",
+      "start": 1.19,
+      "end": 1.32
+    },
+    {
+      "text": "cứ",
+      "start": 1.37,
+      "end": 1.5
+    },
+    {
+      "text": "nghĩ",
+      "start": 1.55,
+      "end": 1.68
+    },
+    {
+      "text": "HTML",
+      "start": 1.73,
+      "end": 1.86
+    },
+    {
+      "text": "dễ",
+      "start": 1.91,
+      "end": 2.04
+    },
+    {
+      "text": "ợt,",
+      "start": 2.09,
+      "end": 2.36
+    },
+    {
+      "text": "chỉ",
+      "start": 2.48,
+      "end": 2.61
+    },
+    {
+      "text": "việc",
+      "start": 2.66,
+      "end": 2.79
+    },
+    {
+      "text": "gõ",
+      "start": 2.84,
+      "end": 2.97
+    },
+    {
+      "text": "thẻ",
+      "start": 3.02,
+      "end": 3.14
+    },
+    {
+      "text": "là",
+      "start": 3.19,
+      "end": 3.32
+    },
+    {
+      "text": "xong.",
+      "start": 3.37,
+      "end": 3.71
+    },
+    {
+      "text": "Nhưng",
+      "start": 4.05,
+      "end": 4.18
+    },
+    {
+      "text": "đề",
+      "start": 4.23,
+      "end": 4.36
+    },
+    {
+      "text": "thi",
+      "start": 4.41,
+      "end": 4.54
+    },
+    {
+      "text": "tốt",
+      "start": 4.59,
+      "end": 4.72
+    },
+    {
+      "text": "nghiệp",
+      "start": 4.77,
+      "end": 4.9
+    },
+    {
+      "text": "đánh",
+      "start": 4.95,
+      "end": 5.08
+    },
+    {
+      "text": "thẳng",
+      "start": 5.13,
+      "end": 5.25
+    },
+    {
+      "text": "vào",
+      "start": 5.3,
+      "end": 5.43
+    },
+    {
+      "text": "bản",
+      "start": 5.48,
+      "end": 5.61
+    },
+    {
+      "text": "chất",
+      "start": 5.66,
+      "end": 5.79
+    },
+    {
+      "text": "hiển",
+      "start": 5.84,
+      "end": 5.97
+    },
+    {
+      "text": "thị",
+      "start": 6.02,
+      "end": 6.15
+    },
+    {
+      "text": "của",
+      "start": 6.2,
+      "end": 6.33
+    },
+    {
+      "text": "trình",
+      "start": 6.38,
+      "end": 6.51
+    },
+    {
+      "text": "duyệt",
+      "start": 6.56,
+      "end": 6.68
+    },
+    {
+      "text": "trên",
+      "start": 6.73,
+      "end": 6.86
+    },
+    {
+      "text": "từng",
+      "start": 6.91,
+      "end": 7.04
+    },
+    {
+      "text": "phần",
+      "start": 7.09,
+      "end": 7.22
+    },
+    {
+      "text": "tử.",
+      "start": 7.27,
+      "end": 7.61
+    },
+    {
+      "text": "Chỉ",
+      "start": 7.95,
+      "end": 8.08
+    },
+    {
+      "text": "cần",
+      "start": 8.13,
+      "end": 8.26
+    },
+    {
+      "text": "lơ",
+      "start": 8.31,
+      "end": 8.44
+    },
+    {
+      "text": "là",
+      "start": 8.49,
+      "end": 8.61
+    },
+    {
+      "text": "một",
+      "start": 8.66,
+      "end": 8.79
+    },
+    {
+      "text": "chút",
+      "start": 8.84,
+      "end": 8.97
+    },
+    {
+      "text": "là",
+      "start": 9.02,
+      "end": 9.15
+    },
+    {
+      "text": "chọn",
+      "start": 9.2,
+      "end": 9.33
+    },
+    {
+      "text": "bừa",
+      "start": 9.38,
+      "end": 9.51
+    },
+    {
+      "text": "dính",
+      "start": 9.56,
+      "end": 9.69
+    },
+    {
+      "text": "bẫy",
+      "start": 9.74,
+      "end": 9.87
+    },
+    {
+      "text": "ngay",
+      "start": 9.92,
+      "end": 10.04
+    },
+    {
+      "text": "lập",
+      "start": 10.09,
+      "end": 10.22
+    },
+    {
+      "text": "tức",
+      "start": 10.27,
+      "end": 10.4
+    },
+    {
+      "text": "đấy",
+      "start": 10.45,
+      "end": 10.58
+    },
+    {
+      "text": "nhé!",
+      "start": 10.63,
+      "end": 11.26
+    }
+  ]
+}

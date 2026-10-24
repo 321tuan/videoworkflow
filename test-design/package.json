@@ -1,0 +1,17 @@
+{
+  "name": "test-design",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dự án thử nghiệm thiết kế Vùng An Toàn TikTok iPhone - Neo Education",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render SafeZoneDemo out/safe-zone-demo.mp4",
+    "still": "remotion still SafeZoneDemo out/preview.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.528",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.528"
+  }
+}

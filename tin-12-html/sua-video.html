@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<title>Sửa video — Tin học 12: Thiết kế Web với HTML (20/10)</title>
+<style>
+body{background:#0b0f1a;color:#e9effa;font-family:'Segoe UI',Arial,sans-serif;max-width:1060px;margin:20px auto;padding:0 16px}
+h2{color:#ff3366;margin:26px 0 10px}.card{background:#111a2e;border:1px solid #234;border-radius:14px;padding:14px;margin:12px 0;display:flex;gap:14px}
+.card img{width:150px;border-radius:8px;border:1px solid #334;align-self:flex-start}
+.card .mid{flex:1}textarea{width:100%;min-height:64px;background:#0a1020;color:#e9effa;border:1px solid #345;border-radius:8px;padding:8px;font-size:15px}
+button{background:#059669;color:#fff;border:0;border-radius:8px;padding:9px 18px;font-size:15px;cursor:pointer;margin:4px 6px 4px 0}
+button:disabled{opacity:.4;cursor:default}.warn{background:#7c2d12}.ok{color:#34d399}.err{color:#fb7185}
+#markers button{background:#1e293b}#markers button.on{background:#059669}
+video{width:100%;max-height:52vh;background:#000;border-radius:12px;border:1px solid #234}
+pre{background:#0a1020;border:1px solid #234;border-radius:8px;padding:10px;max-height:220px;overflow:auto;font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #234;padding:6px 8px;text-align:left}
+small{color:#93a4c3}
+</style></head><body>
+<h2>Trình sửa video — Tin học 12: Thiết kế Web với HTML (20/10) <small>(draft)</small></h2>
+<video id="v" src="/out/draft.mp4" controls preload="metadata"></video>
+<div id="markers"></div>
+<div style="margin:10px 0;padding:10px;background:#111a2e;border:1px solid #234;border-radius:10px">
+<b>Giọng đọc:</b> <span id="curvoice"></span> <a href="/chon-giong.html" style="color:#38bdf8;margin-left:14px;text-decoration:none;font-weight:600">🎧 Nghe thử & Chọn giọng mới (Bước 2)</a><br>
+<select id="voicelist" style="min-width:280px;background:#0a1020;color:#e9effa;border:1px solid #345;border-radius:8px;padding:8px;margin-top:6px"></select>
+<button onclick="setVoice()">Đổi giọng</button>
+<button onclick="regenAll()" class="warn">Sinh lại TẤT CẢ giọng</button>
+<span id="vstatus"></span><br>
+<small>Đổi giọng chỉ cho phép khi ID tồn tại chính xác trên server. Đổi xong phải sinh lại + render lại.</small>
+</div>
+<div style="margin:10px 0;padding:10px;background:#111a2e;border:1px solid #234;border-radius:10px">
+<b>Nhạc nền:</b> <span id="bgmcur"></span> <small id="bgmsrc"></small><br>
+<input type="file" id="bgmfile" accept="audio/*"> <button onclick="uploadBgm()">Tải nhạc lên</button>
+<input id="bgmintent" placeholder="vd: nhạc quảng cáo giáo dục, năng động vừa" style="width:280px;background:#0a1020;color:#e9effa;border:1px solid #345;border-radius:8px;padding:8px">
+<button onclick="findBgm()">AI tìm nhạc</button> <span id="bgmstatus"></span>
+<pre id="bgmout" style="max-height:150px"></pre>
+<div id="bgmlist"></div>
+<small>Chốt nhạc sẽ thay nền hiện tại (tự backup). Render lại để nghe trong video.</small>
+</div>
+<div id="cards"></div>
+<h2>Trộn âm (chỉnh trước khi chốt)</h2>
+<div style="background:#111a2e;border:1px solid #234;border-radius:10px;padding:12px">
+Nhạc nền: <input type="range" id="mix-bgm" min="0" max="200" value="45" style="width:220px"> <b id="mix-bgm-v">45%</b><br>
+<small>Tiếng đọc từng cảnh (%):</small>
+<div id="mixrows"></div>
+<button onclick="saveMix()">Lưu mức âm</button> <span id="mixstatus"></span><br>
+<small>Lưu xong bấm "Render lại full" để nghe mức mới trong video.</small>
+</div>
+<h2>Xuất video</h2>
+<button id="render">Render lại full</button> <span id="rstatus"></span>
+<pre id="rlog"></pre>
+<h2>Lịch sử xuất <small>(đọc mới mỗi lần tải)</small></h2>
+<table id="hist"><tr><th>Tên</th><th>Loại</th><th>Thời điểm</th><th>Dung lượng</th><th>Độ dài</th></tr></table>
+<script>
+const v=document.getElementById('v'),MB=b=>b==null?'':(b/1048576).toFixed(1)+' MB';
+async function J(u,o){const r=await fetch(u,o);return r.json()}
+async function load(){
+ const s=await J('/api/state');
+ document.getElementById('markers').innerHTML='<b>Cảnh:</b> '+s.scenes.map((c,i)=>`<button data-t="${c.start}">${i+1}. ${c.key} (${c.start}s)</button>`).join(' ');
+ document.querySelectorAll('#markers button').forEach(b=>b.onclick=()=>{v.currentTime=+b.dataset.t;v.play()});
+ const STILL_MAP = {
+  s01_hook: ['preview_hook.png'],
+  s02_empathy: ['preview_empathy.png'],
+  s03_value1: ['preview_val1.png'],
+  s04_value2: ['preview_val2.png'],
+  s05_pitch_cta: ['preview_cta.png'],
+  s06_greeting: ['preview_greeting.png'],
+ };
+ document.getElementById('cards').innerHTML=s.scenes.map((c,i)=>`<div class="card">
+  <div style="display:flex;gap:6px;flex-direction:column;align-self:flex-start">
+    ${(STILL_MAP[c.key]||[]).map(img=>`<img src="/out/${img}" style="width:130px;border-radius:6px;border:1px solid #334" title="${img}">`).join('')}
+  </div>
+  <div class="mid"><b>${i+1}. ${c.key}</b> <small>bắt đầu ${c.start}s · dài ${c.dur}s · ${c.frames}f</small><br>
+  <audio src="/vo/${c.key}.ogg" controls style="height:30px;margin:6px 0"></audio><br>
+  <textarea id="t-${c.key}">${c.text}</textarea><br>
+  <button onclick="regen('${c.key}')">Sinh lại giọng cảnh này</button><span id="s-${c.key}"></span><br>
+  <details style="margin-top:6px"><summary>Chữ lyrics (sửa tự do — chỉ đổi chữ hiển thị, không đổi giọng; đổi nghĩa thì bấm sinh lại giọng)</summary>
+  <textarea id="w-${c.key}" rows="4" style="font-size:13px"></textarea><br>
+  <button onclick="saveWords('${c.key}')">Lưu chữ lyrics</button><span id="ws-${c.key}"></span></details></div></div>`).join('');
+ s.scenes.forEach(c=>loadWords(c.key));
+ const h=await J('/api/history');
+ document.getElementById('hist').innerHTML='<tr><th>Tên</th><th>Loại</th><th>Thời điểm</th><th>Dung lượng</th><th>Độ dài</th></tr>'+h.map(e=>`<tr><td>${e.name}</td><td>${e.kind}</td><td>${(e.time||'').replace('T',' ').slice(0,19)}</td><td>${MB(e.size)}</td><td>${e.duration||''}s</td></tr>`).join('');
+}
+async function regen(key){
+ const el=document.getElementById('s-'+key);el.textContent=' đang sinh…';
+ const r=await J('/api/regen',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,text:document.getElementById('t-'+key).value})});
+ el.innerHTML=r.ok?`<span class="ok">xong (${r.dur}s) — render lại để nghe trong video</span>`:`<span class="err">lỗi: ${r.error}</span>`;
+ if(r.ok)load();
+}
+async function loadVoices(){
+ const d=await J('/api/voices');
+ if(!d.ok){document.getElementById('curvoice').innerHTML='<span class="err">'+(d.error||'loi')+'</span>';return}
+ document.getElementById('curvoice').textContent=d.current;
+ document.getElementById('voicelist').innerHTML=d.voices.map(v=>`<option value="${v.id}"${v.id===d.current?' selected':''}>[${v.gender||'?'} ${v.lang||'?'}] ${v.id}</option>`).join('');
+}
+async function setVoice(){
+ const id=document.getElementById('voicelist').value,el=document.getElementById('vstatus');el.textContent=' đang đổi…';
+ const r=await J('/api/voice',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({voice_id:id})});
+ el.innerHTML=r.ok?'<span class="ok">đã đổi — bấm "Sinh lại TẤT CẢ" rồi render lại</span>':`<span class="err">lỗi: ${r.error}</span>`;
+ if(r.ok)loadVoices();
+}
+async function loadWords(key){
+ const d=await J('/api/words?key='+key);
+ document.getElementById('w-'+key).value=(d.words||[]).map(w=>w.text).join(' ');
+}
+async function saveWords(key){
+ const el=document.getElementById('ws-'+key);el.textContent=' đang lưu + căn chữ…';
+ const text=document.getElementById('w-'+key).value;
+ const r=await J('/api/words?key='+key,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text})});
+ el.innerHTML=r.ok?`<span class="ok">đã lưu (${r.count} từ) — render lại để xem</span>`:`<span class="err">${r.error}</span>`;
+ if(r.ok)loadWords(key);
+}
+async function regenAll(){
+ const el=document.getElementById('vstatus');el.textContent=' đang sinh tất cả…';
+ const r=await J('/api/regen-all',{method:'POST'});
+ const bad=(r.results||[]).find(x=>!x.ok);
+ el.innerHTML=bad?`<span class="err">dừng ở ${bad.key}: ${bad.error}</span>`:'<span class="ok">xong tất cả — render lại để nghe trong video</span>';
+ load();
+}
+async function loadBgm(){
+ const d=await J('/api/bgm');
+ document.getElementById('bgmcur').textContent=d.file||'nen.wav';
+ document.getElementById('bgmsrc').textContent='— '+(d.source||'');
+ document.getElementById('bgmlist').innerHTML='Bản đã tải: '+(d.uploads||[]).map(f=>`<button onclick="lockBgm('${f}','uploads')">${f} → Chốt</button>`).join(' ')||'(chưa có)';
+}
+async function uploadBgm(){
+ const f=document.getElementById('bgmfile').files[0];if(!f){alert('chọn file trước');return}
+ const el=document.getElementById('bgmstatus');el.textContent=' đang tải…';
+ const r=await J('/api/bgm-upload?name='+encodeURIComponent(f.name),{method:'POST',body:new Uint8Array(await f.arrayBuffer())});
+ el.innerHTML=r.ok?'<span class="ok">đã tải '+r.name+'</span>':`<span class="err">${r.error}</span>`;
+ if(r.ok)loadBgm();
+}
+async function findBgm(){
+ const el=document.getElementById('bgmstatus');el.textContent=' AI đang tìm…';
+ const r=await J('/api/bgm-find',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({intent:document.getElementById('bgmintent').value})});
+ if(!r.ok){el.textContent='lỗi';return}
+ el.textContent='xong ('+r.results.length+' bản)';
+ document.getElementById('bgmout').innerHTML=r.results.map((b,i)=>`<div style="margin:6px 0"><b>${i+1}. ${b.file}</b> <small>${b.bpm}BPM · ${Math.round(b.secs/60*10)/10}ph · ${b.desc}</small><br><audio src="${b.preview}" controls style="height:30px"></audio> <button onclick="lockBgm('${b.file}','library')">Chốt bản này</button></div>`).join('');
+}
+async function lockBgm(f,dir){
+ if(!confirm('Chốt "'+f+'" làm nhạc nền? Bản hiện tại sẽ được backup.'))return;
+ const el=document.getElementById('bgmstatus');el.textContent=' đang chốt…';
+ const r=await J('/api/bgm-lock',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({file:f,dir:dir||'uploads',source:(dir==='library'?'thu vien local':'uploads')+'/'+f})});
+ el.innerHTML=r.ok?'<span class="ok">đã chốt — render lại để nghe</span>':`<span class="err">${r.error}</span>`;
+ if(r.ok){loadBgm();load()}
+}
+async function loadMix(){
+ const d=await J('/api/mix');
+ document.getElementById('mix-bgm').value=Math.round((d.bgm??1)*100);
+ document.getElementById('mix-bgm-v').textContent=Math.round((d.bgm??1)*100)+'%';
+ document.getElementById('mixrows').innerHTML=Object.keys(d.voice||{}).map(k=>`<div>${k}: <input type="range" id="mix-${k}" min="0" max="200" value="${Math.round((d.voice[k]??1)*100)}" style="width:200px" oninput="document.getElementById('mixv-${k}').textContent=this.value+'%'"> <b id="mixv-${k}">${Math.round((d.voice[k]??1)*100)}%</b></div>`).join('');
+}
+document.getElementById('mix-bgm').addEventListener('input',e=>{document.getElementById('mix-bgm-v').textContent=e.target.value+'%'});
+async function saveMix(){
+ const voice={};
+ document.querySelectorAll('#mixrows input').forEach(i=>{voice[i.id.replace('mix-','')]=Number(i.value)/100});
+ const r=await J('/api/mix',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({voice,bgm:Number(document.getElementById('mix-bgm').value)/100})});
+ document.getElementById('mixstatus').innerHTML=r.ok?'<span class="ok">đã lưu</span>':'<span class="err">lỗi</span>';
+}
+let poll=null;
+document.getElementById('render').onclick=async()=>{
+ const r=await J('/api/render',{method:'POST'});
+ if(!r.ok){alert(r.error);return}
+ document.getElementById('render').disabled=true;document.getElementById('rstatus').textContent=' đang render…';
+ poll=setInterval(async()=>{const s=await J('/api/render-status');
+  document.getElementById('rlog').textContent=s.log;
+  if(!s.running){clearInterval(poll);document.getElementById('render').disabled=false;
+   document.getElementById('rstatus').innerHTML='<span class="ok">xong — tải lại trang để xem bản mới</span>';load()}},3000);
+};
+load();
+loadVoices();
+loadBgm();
+loadMix();
+</script></body></html>

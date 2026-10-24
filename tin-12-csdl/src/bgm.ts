@@ -2,7 +2,7 @@ import { SC, SCENES, TOTAL_FRAMES, VO_LEAD, VO_SEC } from './data';
 import { FPS } from './theme';
 import { BGM_GAIN } from './mix';
 
-const DUCK = 0.52; // Nhac lui xuong 0.52 khi co giong doc
+const DUCK = 0.30; // Nhac lui xuong 30% khi co giong doc
 const FADE_IN = Math.round(1.5 * FPS);
 const FADE_OUT = Math.round(1.5 * FPS);
 
@@ -22,10 +22,10 @@ export const VO_SPANS = (() => {
 
 const clamp01 = (v: number) => (v < 0 ? 0 : v > 1 ? 1 : v);
 const smooth = (x: number) => x * x * (3 - 2 * x);
-const RAMP = 8; // Transition ducking ~0.27s
+const RAMP = 10; // Transition ducking ~0.33s
 
 export const bgmVolumeAt = (frame: number): number => {
-  let v = 0.55; // Muc chuan nen vua phai, em tai
+  let v = 0.40; // Muc chuan nen vua phai, em tai
 
   v *= clamp01(frame / FADE_IN);
   v *= clamp01((TOTAL_FRAMES - frame) / FADE_OUT);
@@ -33,9 +33,15 @@ export const bgmVolumeAt = (frame: number): number => {
   for (const s of VO_SPANS) {
     if (frame < s.from - RAMP || frame > s.to + RAMP) continue;
     let g = 0;
-    if (frame < s.from) g = 1 - smooth(clamp01((frame - (s.from - RAMP)) / RAMP));
-    else if (frame <= s.to) g = 0;
-    else g = smooth(clamp01((frame - s.to) / RAMP));
+    if (frame < s.from) {
+      const p = (frame - (s.from - RAMP)) / RAMP;
+      g = smooth(clamp01(p));
+    } else if (frame <= s.to) {
+      g = 1;
+    } else {
+      const p = (frame - s.to) / RAMP;
+      g = 1 - smooth(clamp01(p));
+    }
     v *= 1 - g * (1 - DUCK);
   }
 

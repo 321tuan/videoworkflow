@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nghe thử & Chọn giọng đọc — Tin học 12: Trí tuệ nhân tạo (AI)</title>
+  <style>
+    :root {
+      --bg: #070913;
+      --card: #0e1526;
+      --border: #1e293b;
+      --text: #f0f4fc;
+      --dim: #8fa0c8;
+      --accent: #00ff87;
+      --violet: #a855f7;
+      --gold: #fbbf24;
+      --green: #34d399;
+      --pink: #f43f5e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 50% 0%, #131b2e 0%, #070913 80%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 32px 16px;
+      line-height: 1.6;
+    }
+    .container { max-width: 840px; margin: 0 auto; }
+    .nav-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .nav-bar a { color: var(--accent); text-decoration: none; font-size: 15px; font-weight: 600; }
+    .nav-bar a:hover { text-decoration: underline; }
+    h1 { font-size: 26px; margin: 0 0 8px; color: #fff; }
+    .subtitle { color: var(--dim); font-size: 15px; margin-bottom: 24px; }
+    .status-banner {
+      background: rgba(0, 255, 135, 0.08);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sample-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      transition: all 0.25s ease;
+    }
+    .sample-card:hover { border-color: var(--accent); box-shadow: 0 6px 24px rgba(0,255,135,0.12); }
+    .sample-card.active { border-color: var(--accent); background: rgba(0, 255, 135, 0.05); }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+    .voice-name { font-size: 19px; font-weight: 700; color: #fff; }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+    }
+    .badge-accent { background: rgba(0,255,135,0.15); color: var(--accent); border: 1px solid var(--accent); }
+    .badge-violet { background: rgba(168,85,247,0.15); color: var(--violet); border: 1px solid var(--violet); }
+    .badge-female { background: rgba(244,63,94,0.15); color: var(--pink); border: 1px solid var(--pink); }
+    .sample-text {
+      font-size: 14.5px;
+      color: #e2e8f0;
+      padding: 12px 16px;
+      background: rgba(0,0,0,0.35);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+    audio { width: 100%; height: 42px; outline: none; margin-bottom: 12px; }
+    .action-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+    }
+    .btn-choose {
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-choose:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(16,185,129,0.3); }
+    .custom-voice-box {
+      margin-top: 32px;
+      background: #111a2e;
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+    }
+    input[type="text"] {
+      background: #0a0f1d;
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      width: 280px;
+      font-size: 14px;
+    }
+    .btn-secondary {
+      background: #334155;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+    .btn-secondary:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav-bar">
+      <span style="font-weight: 700; color: #fff;">Dự án: Tin học 12 — Thiết kế Web với HTML (20/10)</span>
+      <a href="/sua-video" id="link-editor">Sang Trình duyệt lời & QA &rarr;</a>
+    </div>
+
+    <h1>Nghe thử & Chọn giọng đọc</h1>
+    <div class="subtitle">BƯỚC 2/6: Nghe thử các chất giọng truyền cảm và chọn giọng đọc chính thức cho toàn bộ video.</div>
+
+    <div class="status-banner">
+      <div>Đang dùng giọng: <b id="current-voice-text" style="color:var(--accent);">Đang tải...</b></div>
+      <div id="tunnel-status" style="font-size: 13px; color: var(--dim);">Colab TTS</div>
+    </div>
+
+    <div id="sample-list">
+      <!-- Voice cards injected via JS -->
+    </div>
+
+    <div class="custom-voice-box">
+      <h3 style="margin-top:0; font-size:16px;">Chọn giọng khác từ danh sách Colab TTS</h3>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <input type="text" id="custom-voice-input" placeholder="Nhập chính xác ID giọng...">
+        <button class="btn-secondary" onclick="setCustomVoice()">Chốt giọng này</button>
+      </div>
+      <div style="font-size:12px; color:var(--dim); margin-top:8px;">
+        Lưu ý: Voice ID phải tồn tại chính xác trên server Colab `/voices` để tránh bị lệch giọng.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const SAMPLES = [
+      { id: "Thiện Minh", file: "sample-thien-minh.ogg", label: "Thiện Minh", desc: "Nam miền Bắc — Phong cách học thuật, mạch lạc, lôi cuốn", tag: "badge-accent", tagText: "Khuyên dùng" },
+      { id: "Hải Đăng", file: "sample-hai-dang.ogg", label: "Hải Đăng", desc: "Nam miền Bắc — Trẻ trung, giàu năng lượng, dứt khoát", tag: "badge-violet", tagText: "Năng động" },
+      { id: "Trúc Ly", file: "sample-truc-ly.ogg", label: "Trúc Ly", desc: "Nữ miền Nam — Trầm ấm, dịu dàng, tự nhiên", tag: "badge-female", tagText: "Nữ tính" },
+      { id: "Quỳnh Như", file: "sample-quynh-nhu.ogg", label: "Quỳnh Như", desc: "Nữ miền Bắc — Chuẩn phát thanh viên, sắc nét", tag: "badge-female", tagText: "Phát thanh" },
+      { id: "Duy Anh", file: "sample-duy-anh.ogg", label: "Duy Anh", desc: "Nam miền Nam — Trầm ấm, thân thiện, truyền cảm", tag: "badge-accent", tagText: "Thân thiện" }
+    ];
+
+    async function loadState() {
+      try {
+        const res = await fetch('/api/state');
+        const data = await res.json();
+        document.getElementById('current-voice-text').innerText = data.voice_id || 'Chưa chọn';
+        renderCards(data.voice_id);
+      } catch (e) {
+        renderCards('');
+      }
+    }
+
+    function renderCards(currentVoice) {
+      const container = document.getElementById('sample-list');
+      container.innerHTML = '';
+      SAMPLES.forEach(s => {
+        const isCur = s.id === currentVoice;
+        const div = document.createElement('div');
+        div.className = 'sample-card' + (isCur ? ' active' : '');
+        div.innerHTML = `
+          <div class="card-header">
+            <div>
+              <span class="voice-name">${s.label}</span>
+              <span class="badge ${s.tag}">${s.tagText}</span>
+              ${isCur ? '<span class="badge" style="background:var(--accent);color:#070913;">ĐANG CHỌN</span>' : ''}
+            </div>
+            <span style="font-size:13px; color:var(--dim);">${s.desc}</span>
+          </div>
+          <div class="sample-text">
+            "Đừng để cú lừa này khiến em mất toi điểm mười môn Tin học đấy nhé! Một siêu máy tính xử lý hàng tỷ phép tính mỗi giây, ấy thế mà lại chịu thua một em bé ba tuổi khi nhận diện một chú mèo con cơ đấy!"
+          </div>
+          <audio controls preload="none" src="/samples/${s.file}"></audio>
+          <div class="action-row">
+            <span style="font-size:12px; color:var(--dim);">File: ${s.file}</span>
+            <button class="btn-choose" onclick="selectVoice('${s.id}')">${isCur ? '✓ Đang dùng giọng này' : 'Chọn giọng ' + s.label}</button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    async function selectVoice(id) {
+      if (!confirm(`Xác nhận chọn giọng "${id}" cho toàn bộ video?`)) return;
+      try {
+        const res = await fetch('/api/set-voice', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ voice_id: id })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          alert(`Đã chốt giọng: ${id}!\nBạn có thể sang trang duyệt lời để sinh voice cho toàn bộ video.`);
+          loadState();
+        } else {
+          alert('Lỗi: ' + (data.error || 'Không thể đổi giọng'));
+        }
+      } catch (e) {
+        alert('Lỗi kết nối: ' + e.message);
+      }
+    }
+
+    function setCustomVoice() {
+      const val = document.getElementById('custom-voice-input').value.trim();
+      if (!val) return alert('Vui lòng nhập ID giọng');
+      selectVoice(val);
+    }
+
+    loadState();
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "tin-12-html",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video Tin hoc 12: Thiet ke Web voi HTML - 20/10 - Neo Education (9:16)",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render TinHocHTML out/draft.mp4",
+    "still": "remotion still TinHocHTML out/preview.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.528",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.528"
+  }
+}

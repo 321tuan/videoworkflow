@@ -1,0 +1,354 @@
+{
+  "words": [
+    {
+      "text": "Đừng",
+      "start": 0.12,
+      "end": 0.24
+    },
+    {
+      "text": "để",
+      "start": 0.29,
+      "end": 0.41
+    },
+    {
+      "text": "cú",
+      "start": 0.45,
+      "end": 0.57
+    },
+    {
+      "text": "lừa",
+      "start": 0.62,
+      "end": 0.74
+    },
+    {
+      "text": "này",
+      "start": 0.79,
+      "end": 0.91
+    },
+    {
+      "text": "khiến",
+      "start": 0.95,
+      "end": 1.07
+    },
+    {
+      "text": "em",
+      "start": 1.12,
+      "end": 1.24
+    },
+    {
+      "text": "mất",
+      "start": 1.29,
+      "end": 1.41
+    },
+    {
+      "text": "toi",
+      "start": 1.45,
+      "end": 1.57
+    },
+    {
+      "text": "điểm",
+      "start": 1.62,
+      "end": 1.74
+    },
+    {
+      "text": "10",
+      "start": 1.79,
+      "end": 1.91
+    },
+    {
+      "text": "môn",
+      "start": 1.96,
+      "end": 2.08
+    },
+    {
+      "text": "Tin",
+      "start": 2.12,
+      "end": 2.24
+    },
+    {
+      "text": "học",
+      "start": 2.29,
+      "end": 2.41
+    },
+    {
+      "text": "đấy",
+      "start": 2.46,
+      "end": 2.58
+    },
+    {
+      "text": "nhé!",
+      "start": 2.62,
+      "end": 2.94
+    },
+    {
+      "text": "Một",
+      "start": 3.26,
+      "end": 3.38
+    },
+    {
+      "text": "siêu",
+      "start": 3.42,
+      "end": 3.54
+    },
+    {
+      "text": "máy",
+      "start": 3.59,
+      "end": 3.71
+    },
+    {
+      "text": "tính",
+      "start": 3.76,
+      "end": 3.88
+    },
+    {
+      "text": "xử",
+      "start": 3.92,
+      "end": 4.04
+    },
+    {
+      "text": "lý",
+      "start": 4.09,
+      "end": 4.21
+    },
+    {
+      "text": "hàng",
+      "start": 4.26,
+      "end": 4.38
+    },
+    {
+      "text": "tỷ",
+      "start": 4.43,
+      "end": 4.55
+    },
+    {
+      "text": "phép",
+      "start": 4.59,
+      "end": 4.71
+    },
+    {
+      "text": "tính",
+      "start": 4.76,
+      "end": 4.88
+    },
+    {
+      "text": "mỗi",
+      "start": 4.93,
+      "end": 5.05
+    },
+    {
+      "text": "giây,",
+      "start": 5.09,
+      "end": 5.35
+    },
+    {
+      "text": "ấy",
+      "start": 5.46,
+      "end": 5.58
+    },
+    {
+      "text": "thế",
+      "start": 5.63,
+      "end": 5.75
+    },
+    {
+      "text": "mà",
+      "start": 5.79,
+      "end": 5.91
+    },
+    {
+      "text": "lại",
+      "start": 5.96,
+      "end": 6.08
+    },
+    {
+      "text": "chịu",
+      "start": 6.13,
+      "end": 6.25
+    },
+    {
+      "text": "thua",
+      "start": 6.29,
+      "end": 6.41
+    },
+    {
+      "text": "một",
+      "start": 6.46,
+      "end": 6.58
+    },
+    {
+      "text": "em",
+      "start": 6.63,
+      "end": 6.75
+    },
+    {
+      "text": "bé",
+      "start": 6.79,
+      "end": 6.91
+    },
+    {
+      "text": "3",
+      "start": 6.96,
+      "end": 7.08
+    },
+    {
+      "text": "tuổi",
+      "start": 7.13,
+      "end": 7.25
+    },
+    {
+      "text": "khi",
+      "start": 7.3,
+      "end": 7.42
+    },
+    {
+      "text": "nhận",
+      "start": 7.46,
+      "end": 7.58
+    },
+    {
+      "text": "diện",
+      "start": 7.63,
+      "end": 7.75
+    },
+    {
+      "text": "một",
+      "start": 7.8,
+      "end": 7.92
+    },
+    {
+      "text": "chú",
+      "start": 7.96,
+      "end": 8.08
+    },
+    {
+      "text": "mèo",
+      "start": 8.13,
+      "end": 8.25
+    },
+    {
+      "text": "con",
+      "start": 8.3,
+      "end": 8.42
+    },
+    {
+      "text": "cơ",
+      "start": 8.46,
+      "end": 8.58
+    },
+    {
+      "text": "đấy!",
+      "start": 8.63,
+      "end": 8.95
+    },
+    {
+      "text": "Nghe",
+      "start": 9.26,
+      "end": 9.38
+    },
+    {
+      "text": "lạ",
+      "start": 9.43,
+      "end": 9.55
+    },
+    {
+      "text": "chưa",
+      "start": 9.6,
+      "end": 9.72
+    },
+    {
+      "text": "nào?",
+      "start": 9.77,
+      "end": 10.08
+    },
+    {
+      "text": "Bởi",
+      "start": 10.4,
+      "end": 10.52
+    },
+    {
+      "text": "vì",
+      "start": 10.57,
+      "end": 10.69
+    },
+    {
+      "text": "tốc",
+      "start": 10.73,
+      "end": 10.85
+    },
+    {
+      "text": "độ",
+      "start": 10.9,
+      "end": 11.02
+    },
+    {
+      "text": "kinh",
+      "start": 11.07,
+      "end": 11.19
+    },
+    {
+      "text": "hoàng",
+      "start": 11.23,
+      "end": 11.35
+    },
+    {
+      "text": "ấy",
+      "start": 11.4,
+      "end": 11.52
+    },
+    {
+      "text": "hoàn",
+      "start": 11.57,
+      "end": 11.69
+    },
+    {
+      "text": "toàn",
+      "start": 11.73,
+      "end": 11.85
+    },
+    {
+      "text": "chẳng",
+      "start": 11.9,
+      "end": 12.02
+    },
+    {
+      "text": "phải",
+      "start": 12.07,
+      "end": 12.19
+    },
+    {
+      "text": "là",
+      "start": 12.23,
+      "end": 12.35
+    },
+    {
+      "text": "Trí",
+      "start": 12.4,
+      "end": 12.52
+    },
+    {
+      "text": "tuệ",
+      "start": 12.57,
+      "end": 12.69
+    },
+    {
+      "text": "nhân",
+      "start": 12.74,
+      "end": 12.86
+    },
+    {
+      "text": "tạo",
+      "start": 12.9,
+      "end": 13.02
+    },
+    {
+      "text": "đâu",
+      "start": 13.07,
+      "end": 13.19
+    },
+    {
+      "text": "nhé!",
+      "start": 13.24,
+      "end": 13.82
+    }
+  ]
+}

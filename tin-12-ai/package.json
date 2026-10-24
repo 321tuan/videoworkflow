@@ -1,0 +1,17 @@
+{
+  "name": "tin-12-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video Tin hoc 12: Tri tue nhan tao AI - Neo Education (9:16)",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render TinHocAI out/video.mp4",
+    "still": "remotion still TinHocAI out/preview.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.528",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.528"
+  }
+}
