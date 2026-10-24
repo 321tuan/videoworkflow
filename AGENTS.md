@@ -61,8 +61,8 @@
 - **QUY TẮC BẮT BUỘC:**
   - **TUYỆT ĐỐI CẤM ĐẶT NỘI DUNG Ở `Y > 1440px` (tức `bottom < 480px` tính từ đáy 1920).**
   - **Vị trí Phụ đề (Lyrics) chuẩn:** Đặt tại **`bottom: 460px – 480px`** (tương đương `Y ≈ 1440px - 1460px`), pill phụ đề phải có `paddingRight: 180px` hoặc căn trong `maxWidth: 800px` để không bị nút Share đâm vào.
-  - **Vị trí Watermark `neoeducation.vn`:** Đặt ngay trên Phụ đề Lyrics ở **`bottom: 520px - 530px`**, HOẶC đưa lên dải Header an toàn (`top: 350px`) bên dưới Badge.
-  - **Vị trí Progress Bar:** Đặt ở **`top: 345px`** (ngay dưới tab TikTok làm đường chỉ ranh giới cực kỳ sang trọng) HOẶC ở `bottom: 450px` (ngay dưới chân Lyrics). CẤM để ở sát đáy màn hình.
+  - **Vị trí Watermark `neoeducation.vn`:** Đặt ngay trên Phụ đề Lyrics ở **`bottom: 560px - 570px`** (cách mép trên Lyrics ~25-30px, thoáng đãng, sắc nét 100%).
+  - **Vị trí Progress Bar:** **CẤM TUYỆT ĐỐI ĐẶT Ở ĐỈNH (`top: 330px - 360px`)** vì sẽ cắt ngang thân chữ của Badge/Tiêu đề (lỗi chí mạng đã khắc phục). Nếu dùng thanh tiến trình, **CHỈ ĐẶT Ở `bottom: 450px`** (ngay dưới chân Lyrics) làm đường ranh giới thanh mảnh với Caption, HOẶC lược bỏ để giữ không gian sạch sẽ. CẤM để ở sát đáy màn hình.
 
 ### 2. Nguyên tắc Hiển thị Nội dung & Staggered Reveal
 - **CẤM TUYỆT ĐỐI CHỮ MỜ CĂM, LỜ ĐỜ KHI CHƯA ĐỌC TỚI (`opacity: 0.2 - 0.35`):**

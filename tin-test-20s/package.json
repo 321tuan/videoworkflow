@@ -1,0 +1,17 @@
+{
+  "name": "tin-test-20s",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video Test 20s Tin hoc 12 - Chuan Vung An Toan TikTok iPhone - Neo Education",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render TinTest20s out/tin-test-20s.mp4",
+    "still": "remotion still TinTest20s out/preview.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.528",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.528"
+  }
+}
